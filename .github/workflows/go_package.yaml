@@ -12,14 +12,12 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version: '1.18.10'
+          go-version: '1.18'
 
-      - name: Install GCC
-        uses: egor-tensin/setup-gcc@v1.3
-        with:
-          version: 11
+      - name: Install Other dependencies
+        run: sudo apt-get update && sudo apt-get install gcc libegl1-mesa-dev libgles2-mesa-dev libx11-dev xorg-dev
 
-      - name: Install Dependency
+      - name: Install Go Dependency
         run: go get -v -t ./...
 
       - name: Build
