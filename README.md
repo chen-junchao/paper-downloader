@@ -8,3 +8,6 @@ Support:
 
 GUI:
 Use Fyne(https://fyne.io/)
+
+
+Go Version: 1.18

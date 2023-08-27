@@ -1,6 +1,6 @@
 module paper-download
 
-go 1.21.0
+go 1.18.10
 
 require fyne.io/fyne/v2 v2.3.5
 
